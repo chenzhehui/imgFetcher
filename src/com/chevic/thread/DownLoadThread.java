@@ -21,7 +21,7 @@ public class DownLoadThread implements Runnable{
 					i++ ;
 				}catch(Exception ex){
 					System.out.println(img) ;
-//					ex.printStackTrace();
+					ex.printStackTrace();
 				}
 			}
 			this.mf.getLab_info().setText("ÕÍ≥…£∫"+--i+"/"+this.mf.getImgs().size()+ "’≈");	

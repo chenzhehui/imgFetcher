@@ -29,6 +29,10 @@ public class ImgFetcher {
 	
 	public static void saveImg(String directory,String imgSrc,int number) throws Exception{
 		URL url = new URL(imgSrc);
+		File img = new File(System.getProperty("user.dir")+"/img") ;
+		if(!img.exists()){
+			img.mkdir();
+		}
 		File dir = new File(System.getProperty("user.dir")+"/img/"+directory) ;
 		if(!dir.exists()){
 			dir.mkdir() ;
