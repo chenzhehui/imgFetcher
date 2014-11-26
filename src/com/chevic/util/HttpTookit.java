@@ -112,17 +112,20 @@ public final class HttpTookit {
 			@Override
 			public void run(){
 				Map m = new HashMap() ;
-//				m.put("topicId", "82822") ;
-//				m.put("operate", "0") ;
-				m.put("topicId", args[0]) ;
-				m.put("operate", args[1]) ;
+				m.put("action", "vote") ;
+				m.put("picID", "41") ;
+//				m.put("topicId", args[0]) ;
+//				m.put("operate", args[1]) ;
 				// TODO Auto-generated method stub
+				int i=0 ;
 				while(true){
-					
-					String y = doPost("http://best.pconline.com.cn/action/topic/like_and_dislike.jsp", m, "UTF-8", true); 
+					String ramdom = "asldkjl" +i+ "jlaksee"+(i+5);
+					String y = doPost("http://42.159.196.120/luoding/games/luodingRote/luodingRote.php?from_user="+ramdom, m, "UTF-8", true); 
+					String k = doPost("http://42.159.196.120/luoding/games/luodingRote/luodingRoteService.php", m, "UTF-8", true); 
 					System.out.println(y);
+					System.out.println(k);
 					try{
-						Thread.sleep(30000);
+						Thread.sleep(2000);
 					}catch(Exception ex){
 						ex.printStackTrace();
 					}
